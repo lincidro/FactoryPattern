@@ -9,6 +9,7 @@ import com.eduardo.proyecto.Factory.Abstract.AbstractFactory;
 import com.eduardo.proyecto.Factory.BreadFactory;
 import com.eduardo.proyecto.Factory.FactoryGenerator;
 import com.eduardo.proyecto.interfaces.Bread;
+import com.eduardo.proyecto.interfaces.Drink;
 import com.eduardo.proyecto.interfaces.Filling;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,5 +44,8 @@ public class MainActivity extends AppCompatActivity {
         Bread bread = abstractFactoryBread.getBread("BRI");
         Log.d(DEBUG_TAG,bread.name()+" "+bread.calories());
 
+        AbstractFactory abstractFactoryBread = FactoryGenerator.getFactory("DRI");
+        Drink drink = abstractFactoryBread.getDrink("CL");
+        Log.d(DEBUG_TAG,bread.name()+" "+bread.calories());
     }
 }
